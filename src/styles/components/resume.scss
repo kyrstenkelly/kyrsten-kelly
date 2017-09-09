@@ -1,0 +1,27 @@
+.resume-container {
+  .job {
+    padding: 20px 0;
+
+    &--header {
+      line-height: 24px;
+      margin-bottom: 10px;
+
+      &-position {
+        font-size: 18px;
+      }
+
+      &-company,
+      &-date-range {
+      }
+
+      &-company {
+        padding-right: 10px;
+      }
+
+      &-date-range {
+        font-size: 14px;
+      }
+    }
+
+  }
+}

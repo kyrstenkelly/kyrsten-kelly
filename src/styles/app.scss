@@ -1,0 +1,58 @@
+@import './variables';
+
+@import 'components/header';
+@import 'components/resume';
+@import 'components/intro';
+
+/* --- General Styles --- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: $text-dark-gray;
+}
+
+.section-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .section {
+    flex: 0 1 50%;
+    margin: 10px;
+    padding: 30px;
+    border: $default-border;
+
+    &--25 {
+      width: 25%;
+    }
+
+    &--50 {
+      width: 50%;
+    }
+  }
+}
+
+.title {
+  font-family: $cursive-font;
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+a {
+  color: $text-dark-gray;
+  text-decoration: none;
+
+  &:hover {
+    color: $light-blue;
+  }
+}

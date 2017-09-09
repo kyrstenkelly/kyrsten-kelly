@@ -1,0 +1,40 @@
+@import '../variables';
+
+.intro {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: $light-gray;
+
+  &--section {
+    &:first-of-type {
+      border: $default-border;
+    }
+  }
+
+  .personal-info {
+    text-align: right;
+
+    &--section {
+      display: inline-block;
+      margin-left: 20px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    .link {
+      position: relative;
+      margin: 5px;
+      line-height: 40px;
+    }
+
+    .icon {
+      position: relative;
+      top: 5px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
