@@ -16,8 +16,10 @@ class App extends Component {
     return (
       <div className="app">
         <div className="header" style={ headerStyle }>
-          <h1>Kyrsten Kelly</h1>
-          <h2>Software Developer</h2>
+          <div className="header--title">
+            <div className="header--title-main">Kyrsten Kelly</div>
+            <div className="header--title-secondary">Software Developer</div>
+          </div>
         </div>
         <Intro />
         <div className="section-container">

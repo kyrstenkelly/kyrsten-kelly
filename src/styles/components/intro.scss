@@ -1,40 +1,36 @@
 @import '../variables';
 
 .intro {
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
   background-color: $light-gray;
 
-  &--section {
-    &:first-of-type {
-      border: $default-border;
-    }
-  }
+  .intro--section.intro--section-info {
+    border: none;
+    flex: 1 0;
 
-  .personal-info {
-    text-align: right;
+    .personal-info {
+      text-align: right;
 
-    &--section {
-      display: inline-block;
-      margin-left: 20px;
+      &--section {
+        display: inline-block;
+        margin-left: 20px;
 
-      &:first-of-type {
-        margin-left: 0;
+        &:first-of-type {
+          margin-left: 0;
+        }
       }
-    }
 
-    .link {
-      position: relative;
-      margin: 5px;
-      line-height: 40px;
-    }
+      .link {
+        position: relative;
+        margin: 5px;
+        line-height: 40px;
+      }
 
-    .icon {
-      position: relative;
-      top: 5px;
-      height: 25px;
-      width: 25px;
+      .icon {
+        position: relative;
+        top: 5px;
+        height: 25px;
+        width: 25px;
+      }
     }
   }
 }
