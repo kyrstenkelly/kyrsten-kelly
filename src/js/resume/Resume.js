@@ -17,7 +17,9 @@ class Resume extends Component {
     return(
       <div className="resume-container">
         <div className="title">Experience</div>
-        {jobList}
+        <div className="jobs">
+          {jobList}
+        </div>
       </div>
     );
   }

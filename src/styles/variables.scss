@@ -7,9 +7,11 @@ $lighter-blue: rgba(78, 205, 196, .4);
 $salmon: rgba(250, 139, 126, 1);           // #FA8B7E
 $yellow: rgba(252, 240, 131, 1);           // #FCF083
 $white: #ffffff;
+$dark-gray: #424242;
+$medium-gray: #dee5e7;
 $light-gray: #f6f8f8;
 
 $title-font: 'Quicksand', sans-serif;
 $cursive-font: 'Grand Hotel', cursive;
-$text-dark-gray: #424242;
-$default-border: 1px solid #dee5e7;
+$default-text-color: $dark-gray;
+$default-border: 1px solid $medium-gray;

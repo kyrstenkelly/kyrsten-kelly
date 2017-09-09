@@ -1,27 +1,57 @@
 .resume-container {
-  .job {
-    padding: 20px 0;
+  .title {
+    margin-bottom: 20px;
+  }
 
-    &--header {
-      line-height: 24px;
-      margin-bottom: 10px;
+  .jobs {
+    padding-left: 20px;
+    border-left: 1px solid $yellow;
 
-      &-position {
-        font-size: 18px;
+    .job {
+      padding: 20px 0;
+
+      &:first-of-type {
+        padding-top: 0;
       }
 
-      &-company,
-      &-date-range {
+      &:last-of-type {
+        padding-bottom: 0;
       }
 
-      &-company {
-        padding-right: 10px;
+      &--header {
+        line-height: 24px;
+        margin-bottom: 10px;
+
+        &-position {
+          font-size: 18px;
+          position: relative;
+
+          &:before{
+             content: '';
+             position: absolute;
+             left: -27px;
+             top: 5px;
+             display: inline-block;
+             width: 12px;
+             height: 12px;
+             border-radius: 6px;
+             background-color: $salmon;
+          }
+        }
+
+        &-company,
+        &-date-range {
+        }
+
+        &-company {
+          padding-right: 10px;
+        }
+
+        &-date-range {
+          font-size: 14px;
+        }
       }
 
-      &-date-range {
-        font-size: 14px;
-      }
     }
-
   }
 }
