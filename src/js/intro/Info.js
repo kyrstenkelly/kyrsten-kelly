@@ -16,33 +16,33 @@ class Info extends Component {
         <span className="personal-info--section">
           <span className="title">Links:</span>
           <a className="link" href="https://www.linkedin.com/in/kyrsten-kelly-42386091/">
-            <img className="icon" src={linkedin} />
+            <img className="icon" src={linkedin} alt="LinkedIn"/>
           </a>
           <a className="link" href="https://github.com/kyrstenkelly">
-            <img className="icon" src={github} />
+            <img className="icon" src={github} alt="GitHub"/>
           </a>
           <a className="link" href="https://www.facebook.com/kyrsten.kelly">
-            <img className="icon" src={facebook} />
+            <img className="icon" src={facebook} alt="Facebook"/>
           </a>
         </span>
 
         <span className="personal-info--section">
           <span className="title">Contact me:</span>
           <a className="link" href="tel:1-512-627-4323">
-            <img className="icon" src={phone} />
+            <img className="icon" src={phone} alt="phone"/>
           </a>
           <a className="link" href="sms:1-512-627-4323">
-            <img className="icon" src={chat} />
+            <img className="icon" src={chat} alt="phone"/>
           </a>
           <a className="link" href="mailto:kyrsten.kelly@gmail.com">
-            <img className="icon" src={email} />
+            <img className="icon" src={email} alt="email"/>
           </a>
         </span>
 
         <span className="personal-info--section">
           <span className="title">Resume:</span>
           <a className="link" href={resume} download>
-            <img className="icon" src={download} />
+            <img className="icon" src={download} alt="download"/>
           </a>
         </span>
       </div>

@@ -1,0 +1,18 @@
+@import '../variables';
+
+.skills {
+  .skill {
+    &--label {
+      display: inline-block;
+      width: 100px;
+    }
+
+    &--stars {
+      .star {
+        vertical-align: middle;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

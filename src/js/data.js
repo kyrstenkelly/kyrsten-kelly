@@ -18,7 +18,65 @@ const jobs = [{
   description: 'Worked on two data visualization web applications in Backbone and AngularJS, using test-driven development.',
 }];
 
-const skills = [];
+const skills = [{
+    label: 'HTML',
+    rank: 5,
+  },{
+    label: 'CSS/SASS',
+    rank: 5,
+  },{
+    label: 'Angular',
+    rank: 5,
+  },{
+    label: 'React',
+    rank: 4,
+  },{
+    label: 'Ember',
+    rank: 3,
+  },{
+    label: 'Node',
+    rank: 4,
+  },{
+    label: 'Bootstrap',
+    rank: 5,
+  },{
+    label: 'jQuery',
+    rank: 5,
+  },{
+    label: 'Highcharts',
+    rank: 4,
+  },{
+    label: 'D3',
+    rank: 3,
+  },{
+    label: 'Grails',
+    rank: 5,
+  },{
+    label: 'Java',
+    rank: 4,
+  },{
+    label: 'Python',
+    rank: 3,
+  },{
+    label: 'Git',
+    rank: 5,
+  },{
+    label: 'Bower',
+    rank: 5,
+  },{
+    label: 'Grunt',
+    rank: 5,
+  },{
+    label: 'Gulp',
+    rank: 5,
+  },{
+    label: 'AWS',
+    rank: 4,
+  },{
+    label: 'MySQL',
+    rank: 4,
+  }
+];
 
 const interests = [];
 
