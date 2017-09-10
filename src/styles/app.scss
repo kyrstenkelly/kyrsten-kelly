@@ -1,5 +1,7 @@
 @import './variables';
+@import './mixins';
 
+@import 'components/education';
 @import 'components/header';
 @import 'components/intro';
 @import 'components/resume';
@@ -10,7 +12,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: $text-default;
   font-family: 'Open Sans', sans-serif;
   color: $default-text-color;
 }
@@ -19,6 +21,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 
   .section {
     margin: 10px;
@@ -38,6 +41,7 @@ body {
 .title {
   font-family: $cursive-font;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .bold {
@@ -46,6 +50,27 @@ body {
 
 .italic {
   font-style: italic;
+}
+
+.date-range {
+  @extend .italic;
+  font-size: $text-sm;
+}
+
+.list-item {
+  padding: 10px 0;
+
+  &--small {
+    padding: 5px 0;
+  }
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 }
 
 a {

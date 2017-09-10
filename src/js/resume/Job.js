@@ -12,7 +12,7 @@ class Job extends Component {
 
   render() {
     return (
-      <div className="job">
+      <div className="job list-item">
         <div className="job--header">
           <div className="job--header-position bold">
             {this.props.position}
@@ -20,7 +20,7 @@ class Job extends Component {
           <span className="job--header-company">
             {this.props.company}
           </span>
-          <span className="job--header-date-range italic">
+          <span className="job--header-date-range date-range">
             {this.props.startDate} &ndash; {this.props.endDate}
           </span>
         </div>

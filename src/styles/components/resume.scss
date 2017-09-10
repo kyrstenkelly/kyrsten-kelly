@@ -1,54 +1,24 @@
-.resume-container {
-  .title {
-    margin-bottom: 20px;
-  }
+@import '../variables';
+@import '../mixins';
 
+.resume-container {
   .jobs {
     padding-left: 20px;
     border-left: 1px solid $yellow;
 
     .job {
-      padding: 20px 0;
-
-      &:first-of-type {
-        padding-top: 0;
-      }
-
-      &:last-of-type {
-        padding-bottom: 0;
-      }
-
       &--header {
         line-height: 24px;
         margin-bottom: 10px;
 
         &-position {
-          font-size: 18px;
-          position: relative;
+          @include bullet-list($salmon);
 
-          &:before{
-             content: '';
-             position: absolute;
-             left: -27px;
-             top: 5px;
-             display: inline-block;
-             width: 12px;
-             height: 12px;
-             border-radius: 6px;
-             background-color: $salmon;
-          }
-        }
-
-        &-company,
-        &-date-range {
+          font-size: $text-lg;
         }
 
         &-company {
           padding-right: 10px;
-        }
-
-        &-date-range {
-          font-size: 14px;
         }
       }
 

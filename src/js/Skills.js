@@ -27,7 +27,7 @@ class Skills extends Component {
   render() {
     const skillList = skills.map((skill, i) => {
       return (
-        <div className="skill" key={i}>
+        <div className="skill list-item--small" key={i}>
           <span className="skill--label">{skill.label}</span>
           <span className="skill--stars">{this.getStars(skill.rank)}</span>
         </div>
@@ -35,7 +35,7 @@ class Skills extends Component {
     });
 
     return (
-      <div>
+      <div className="skills-container">
         <div className="title">Skills</div>
         <div className="skills">
           {skillList}
