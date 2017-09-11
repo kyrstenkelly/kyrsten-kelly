@@ -21,14 +21,12 @@ class App extends Component {
             <div className="header--title-main">Kyrsten Kelly</div>
             <div className="header--title-secondary">Software Developer</div>
           </div>
+          <Info />
         </div>
         <div className="section-container columns">
           <div className="rows row-1">
-            <div className="section section--50 section--about">
+            <div className="section section--about">
               <About />
-            </div>
-            <div className="section section--50 section--info">
-              <Info />
             </div>
           </div>
           <div className="rows row-2">

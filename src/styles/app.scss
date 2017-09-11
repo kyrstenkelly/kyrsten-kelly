@@ -29,7 +29,6 @@ body {
   .rows {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
 
     &.row-1 {
       flex-wrap: wrap;
@@ -39,30 +38,21 @@ body {
       }
 
       .section {
-        &--25, &--50 {
-          flex: 0 1 100%;
-        }
+        flex: 0 1 100%;
 
         &--skills {
           padding-bottom: 15px;
         }
 
         @include for-tablet-landscape-up {
-          &--25 {
-            flex: initial;
-            width: 25%;
-          }
-
-          &--50 {
-            flex: initial;
-            width: 50%;
-          }
+          flex: 1;
         }
       }
     }
 
     &.row-2 {
       flex-wrap: wrap;
+      align-items: flex-start;
 
       @include for-desktop-up {
         flex-wrap: nowrap;

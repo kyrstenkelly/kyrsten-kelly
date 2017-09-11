@@ -27,7 +27,7 @@ class Info extends Component {
         </span>
 
         <span className="personal-info--section">
-          <span className="title">Contact me:</span>
+          <span className="title">Contact:</span>
           <a className="link" href="tel:1-512-627-4323">
             <img className="icon" src={phone} alt="phone"/>
           </a>
