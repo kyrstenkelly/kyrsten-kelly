@@ -23,7 +23,7 @@ class App extends Component {
           </div>
         </div>
         <div className="section-container columns">
-          <div className="rows">
+          <div className="rows row-1">
             <div className="section section--50 section--about">
               <About />
             </div>
@@ -31,7 +31,7 @@ class App extends Component {
               <Info />
             </div>
           </div>
-          <div className="rows">
+          <div className="rows row-2">
             <div className="section section--25 section--education">
               <Education />
             </div>

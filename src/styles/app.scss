@@ -29,36 +29,75 @@ body {
   .rows {
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
-  }
+    align-items: flex-start;
 
-  .section {
-    background-color: $white;
-    margin: 10px;
-    padding: 30px;
-    border: $default-border;
+    &.row-1 {
+      flex-wrap: wrap;
 
-    &--25 {
-      width: 25%;
+      @include for-tablet-landscape-up {
+        flex-wrap: nowrap;
+      }
+
+      .section {
+        &--25, &--50 {
+          flex: 0 1 100%;
+        }
+
+        &--skills {
+          padding-bottom: 15px;
+        }
+
+        @include for-tablet-landscape-up {
+          &--25 {
+            flex: initial;
+            width: 25%;
+          }
+
+          &--50 {
+            flex: initial;
+            width: 50%;
+          }
+        }
+      }
     }
 
-    &--50 {
-      width: 50%;
+    &.row-2 {
+      flex-wrap: wrap;
+
+      @include for-desktop-up {
+        flex-wrap: nowrap;
+      }
+
+      .section {
+        &--25, &--50 {
+          flex: 0 1 100%;
+        }
+
+        &--skills {
+          padding-bottom: 15px;
+        }
+
+        @include for-desktop-up {
+          &--25 {
+            flex: initial;
+            width: 25%;
+          }
+
+          &--50 {
+            flex: initial;
+            width: 50%;
+          }
+        }
+      }
     }
 
-    &--skills {
-      padding-bottom: 15px;
+    .section {
+      background-color: $white;
+      margin: 10px;
+      padding: 30px;
+      border: $default-border;
+      box-sizing: border-box;
     }
-
-    // @include for-tablet-landscape-up {
-    //   &--25 {
-    //     width: 25%;
-    //   }
-    //
-    //   &--50 {
-    //     width: 50%;
-    //   }
-    // }
   }
 }
 

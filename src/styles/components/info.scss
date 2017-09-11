@@ -1,7 +1,12 @@
 @import '../variables';
+@import '../mixins';
 
 .personal-info {
-  text-align: right;
+  text-align: left;
+
+  @include for-tablet-landscape-up {
+    text-align: right;
+  }
 
   &--section {
     display: inline-block;
