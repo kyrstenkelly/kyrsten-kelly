@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import background from '../img/background.png';
 import '../styles/css/app.css';
 
+import About from './intro/About';
 import Education from './Education';
-import Intro from './intro/Intro';
+import Info from './intro/Info';
 import Resume from './resume/Resume';
 import Skills from './Skills';
 
@@ -21,16 +22,25 @@ class App extends Component {
             <div className="header--title-secondary">Software Developer</div>
           </div>
         </div>
-        <Intro />
-        <div className="section-container">
-          <div className="section section--25 section--education">
-            <Education />
+        <div className="section-container columns">
+          <div className="rows">
+            <div className="section section--50 section--about">
+              <About />
+            </div>
+            <div className="section section--50 section--info">
+              <Info />
+            </div>
           </div>
-          <div className="section section--50 section--resume">
-            <Resume />
-          </div>
-          <div className="section section--25 section--skills">
-            <Skills />
+          <div className="rows">
+            <div className="section section--25 section--education">
+              <Education />
+            </div>
+            <div className="section section--50 section--resume">
+              <Resume />
+            </div>
+            <div className="section section--25 section--skills">
+              <Skills />
+            </div>
           </div>
         </div>
       </div>

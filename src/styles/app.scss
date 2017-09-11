@@ -3,7 +3,7 @@
 
 @import 'components/education';
 @import 'components/header';
-@import 'components/intro';
+@import 'components/info';
 @import 'components/resume';
 @import 'components/skills';
 
@@ -15,15 +15,25 @@ body {
   font-size: $text-default;
   font-family: 'Open Sans', sans-serif;
   color: $default-text-color;
+  background-color: $light-gray;
 }
 
 .section-container {
   padding: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+
+  &.columns {
+    flex-direction: column;
+  }
+
+  .rows {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+  }
 
   .section {
+    background-color: $white;
     margin: 10px;
     padding: 30px;
     border: $default-border;
@@ -39,6 +49,16 @@ body {
     &--skills {
       padding-bottom: 15px;
     }
+
+    // @include for-tablet-landscape-up {
+    //   &--25 {
+    //     width: 25%;
+    //   }
+    //
+    //   &--50 {
+    //     width: 50%;
+    //   }
+    // }
   }
 }
 
