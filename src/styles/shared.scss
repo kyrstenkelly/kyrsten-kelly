@@ -1,0 +1,11 @@
+// --- VARIABLES ---
+$slate: #3d3d3d;
+
+$header-font-family: 'Quicksand', sans-serif;
+
+
+// --- FUNCTIONS ---
+@function rem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
