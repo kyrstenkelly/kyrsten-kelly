@@ -1,0 +1,35 @@
+@import '../../styles/shared';
+
+.portfolio {
+
+  h1, h2, h3, .project {
+    font-weight: 100;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+
+    .project {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: rem(15);
+
+      .project-image {
+        height: 200px;
+        width: 350px;
+        background-color: $slate;
+      }
+    }
+
+    // Hack so that the last row of projects
+    // aligns to the left
+    &::after {
+      content: "";
+      flex: auto;
+      margin: rem(15);
+    }
+  }
+}

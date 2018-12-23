@@ -1,8 +1,10 @@
+@import './styles/shared.scss';
+
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: $base-font-size;
+  font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,4 +16,8 @@ code {
 
 .app {
   text-align: center;
+
+  .content {
+    margin: rem(20);
+  }
 }

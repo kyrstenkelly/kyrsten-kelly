@@ -11,10 +11,12 @@ export default (
   <Router>
     <div className='app'>
       <Header/>
-      <Route path='/' exact component={Home} />
-      <Route path='/portfolio/' component={Portfolio} />
-      <Route path='/resume/' component={Resume} />
-      <Route path='/contact/' component={Contact} />
+      <div className='content'>
+        <Route path='/' exact component={Home} />
+        <Route path='/portfolio/' component={Portfolio} />
+        <Route path='/resume/' component={Resume} />
+        <Route path='/contact/' component={Contact} />
+      </div>
     </div>
   </Router>
 );
