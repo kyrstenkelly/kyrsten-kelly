@@ -1,28 +1,67 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <div class="intro">
+      <img class="profile-image" src="@/assets/kyrsten.jpg" />
+      <h1 class="title">Hi, I'm Kyrsten.</h1>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+    components: {},
+    data() {
+      return {
+        title: 'Kyrsten Kelly'
+      }
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+.app {
+  margin: spacing(2);
+
+  @include media($screen-sm) {
+    margin: spacing(3);
+  }
+
+  @include media($screen-md) {
+    margin: spacing(4);
+  }
+
+  @include media($screen-lg) {
+    margin: spacing(5);
+  }
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: spacing(3) spacing(2);
+
+  @include media($screen-sm) {
+    flex-direction: row;
+  }
+
+  .profile-image {
+    width: 60%;
+    border-radius: 50%;
+    margin-right: spacing(0);
+
+    @include media($screen-sm) {
+      width: 30%;
+      max-width: 200px;
+      margin-right: spacing(3);
+    }
+
+    @include media($screen-lg) {
+      margin-right: spacing(5);
+    }
+  }
 }
 </style>

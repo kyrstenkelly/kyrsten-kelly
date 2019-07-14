@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand&display=swap');
+@import 'node_modules/kyrsten-sass-utils/all';
+
+$font-family-title: 'Quicksand', sans-serif;
+$font-family: 'Open Sans', sans-serif;
+
+// Colors
+$slate: #2c3e50;
+$teal: #42b983;
+
+body {
+  color: $slate;
+  font-family: $font-family;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  font-family: $font-family-title;
+  font-weight: $font-weight-light;
+}
+
+.link {
+  color: $teal;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+$base-spacing: 8px;
+@function spacing($multiplier) {
+  @return $multiplier * $base-spacing;
+}
