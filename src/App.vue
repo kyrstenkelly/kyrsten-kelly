@@ -8,32 +8,50 @@
       />
       <h1 class="title">Hi, I'm Kyrsten.</h1>
     </div>
+
+    <resume />
   </div>
 </template>
 
 <script>
+  import Resume from '@/components/Resume.vue';
+
   export default {
     name: 'app',
-    components: {},
+    components: {
+      Resume,
+    },
     computed: {
       image: () => require('@/assets/kyrsten.jpg'),
       imagePlaceholder: () => require('@/assets/kyrsten-compressed.jpg')
     },
-    data() {
-      return {
-        title: 'Kyrsten Kelly'
-      }
-    }
   }
 </script>
 
 <style lang="scss">
+#app {
+  max-width: 900px;
+  margin: spacing(2);
+
+  @include media($screen-sm) {
+    margin: spacing(4);
+  }
+
+  @include media($screen-md) {
+    margin: spacing(6);
+  }
+
+  @include media($screen-lg) {
+    margin: spacing(8);
+  }
+}
+
 .intro {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: spacing(5) spacing(2) spacing(3);
+  margin: spacing(5) spacing(2);
 
   .profile-image {
     width: 60%;
@@ -48,12 +66,12 @@
   }
 
   @include media($screen-sm) {
-    margin: spacing(7) spacing(2) spacing(3);
+    margin: spacing(7) spacing(2);
     flex-direction: row;
 
     .profile-image {
       width: 25%;
-      max-width: 150px;
+      max-width: 150px !important;
       margin-right: spacing(3);
     }
 
