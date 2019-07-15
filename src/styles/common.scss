@@ -8,12 +8,35 @@ $font-family: 'Open Sans', sans-serif;
 $slate: #2c3e50;
 $teal: #42b983;
 
+// Spacing
+$base-spacing: 8px;
+@function spacing($multiplier) {
+  @return $multiplier * $base-spacing;
+}
+
+// Common classes/main styles
 body {
   color: $slate;
   font-family: $font-family;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  margin: spacing(2);
+
+  @include media($screen-sm) {
+    margin: spacing(3);
+  }
+
+  @include media($screen-md) {
+    margin: spacing(4);
+  }
+
+  @include media($screen-lg) {
+    margin: spacing(5);
+  }
 }
 
 .title {
@@ -29,9 +52,4 @@ body {
     text-decoration: underline;
     cursor: pointer;
   }
-}
-
-$base-spacing: 8px;
-@function spacing($multiplier) {
-  @return $multiplier * $base-spacing;
 }
