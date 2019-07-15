@@ -1,36 +1,50 @@
 <template>
   <div class="resume">
-    <div
-      class="section"
-      v-for="section in sections"
-      :key="section.icon"
-    >
+    <div class="section">
       <div class="section__title">
-        <img
-          svg-inline
-          class="section__icon"
-          :src="icons[section.icon]"
-          :alt="section.icon"
-        />
-        {{ section.title }}
+        <img svg-inline class="section__icon" :src="icons.code" alt="code"/>
+        Things I know
       </div>
 
-      <div v-if="section.component" class="section__content">
-        <component :is="section.component"/>
+      <div class="section__content">
+        <languages v-bind="{languages, activeKey}" />
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section__title">
+        <img svg-inline class="section__icon" :src="icons.tools" alt="tools"/>
+        Tools I've Used
+      </div>
+
+      <div class="section__content">
+        <tools v-bind="{tools, activeKey}" />
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section__title">
+        <img svg-inline class="section__icon" :src="icons.building" alt="building"/>
+        Places I've Worked
+      </div>
+
+      <div class="section__content">
+        <jobs v-bind="{jobs, highlight, unhighlight}" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Coding from './Coding.vue';
+  import Languages from './Languages.vue';
   import Jobs from './Jobs.vue';
   import Tools from './Tools.vue';
+  import data from '../data';
 
   export default {
     name: 'resume',
     components: {
-      Coding,
+      Languages,
       Jobs,
       Tools,
     },
@@ -41,21 +55,20 @@
         building: require('@/assets/building.svg'),
       })
     },
+    methods: {
+      highlight: function(key) {
+        this.activeKey = key;
+      },
+      unhighlight: function() {
+        this.activeKey = '';
+      },
+    },
     data() {
       return {
-        sections: [{
-          title: 'Things I know',
-          icon: 'code',
-          component: 'coding',
-        }, {
-          title: 'Tools I\'ve used',
-          icon: 'tools',
-          component: 'tools',
-        }, {
-          title: 'Places I\'ve worked',
-          icon: 'building',
-          component: 'jobs',
-        }]
+        activeKey: '',
+        languages: data.languages,
+        tools: data.tools,
+        jobs: data.jobs,
       }
     }
   }

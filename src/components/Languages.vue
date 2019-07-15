@@ -1,11 +1,14 @@
 <template>
-  <ul class="tools">
+  <ul class="language">
     <li
-      :class="`tools__item ${item.jobs.includes(activeKey) ? 'active' : ''}`"
-      v-for="item in tools"
-      :key="item.key"
+      :class="`language__item ${item.jobs.includes(activeKey) ? 'active' : ''}`"
+      v-for="item in languages"
+      :key="item.label"
     >
-      <a class="link" :href="item.link" target="_blank">
+      <a
+        :href="item.link"
+        target="_blank"
+      >
         {{ item.label }}
       </a>
     </li>
@@ -14,16 +17,16 @@
 
 <script>
 export default {
-  name: 'tools',
+  name: 'languages',
   props: {
     activeKey: String,
-    tools: Array,
-  }
+    languages: Array,
+  },
 }
 </script>
 
 <style lang="scss">
-  .tools {
+  .language {
     display: block;
     padding-left: 0;
     margin: 0;
