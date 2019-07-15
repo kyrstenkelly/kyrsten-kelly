@@ -42,7 +42,7 @@
   }
 
   @include media($screen-lg) {
-    margin: spacing(8);
+    margin: spacing(8) auto;
   }
 }
 
@@ -61,7 +61,7 @@
   }
 
   .title {
-    font-size: rem(40);
+    font-size: rem(36);
     transition: font-size .2s ease;
   }
 

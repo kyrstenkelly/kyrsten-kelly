@@ -3,7 +3,7 @@
     <div
       class="section"
       v-for="section in sections"
-      v-bind:key="section.icon"
+      :key="section.icon"
     >
       <div class="section__title">
         <img
@@ -15,22 +15,25 @@
         {{ section.title }}
       </div>
 
-      <ul class="section__content">
-        <li
-          class="section__content-item"
-          v-for="item in section.items"
-          v-bind:key="item"
-        >
-          {{ item }}
-        </li>
-      </ul>
+      <div v-if="section.component" class="section__content">
+        <component :is="section.component"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+  import Coding from './Coding.vue';
+  import Jobs from './Jobs.vue';
+  import Tools from './Tools.vue';
+
   export default {
     name: 'resume',
+    components: {
+      Coding,
+      Jobs,
+      Tools,
+    },
     computed: {
       icons: () => ({
         code: require('@/assets/code.svg'),
@@ -43,19 +46,15 @@
         sections: [{
           title: 'Things I know',
           icon: 'code',
-          items: ['React', 'Angular', 'Vue', 'JavaScript', 'Golang']
+          component: 'coding',
         }, {
           title: 'Tools I\'ve used',
           icon: 'tools',
-          items: [
-            'Git', 'Github', 'Gitlab', 'JIRA', 'Trello', 'AWS', 'Cloudflare',
-            'New Relic', 'Datadog', 'Chartio', 'Marathon', 'Circle CI',
-            'Kibana', 'PagerDuty', 'Segment', 'Google Analytics', 'Optimizely'
-          ]
+          component: 'tools',
         }, {
           title: 'Places I\'ve worked',
           icon: 'building',
-          items: ['TrendKite', 'Spiceworks', 'Drilling Info, Inc']
+          component: 'jobs',
         }]
       }
     }
@@ -63,8 +62,6 @@
 </script>
 
 <style lang="scss">
-  $icon-size: 22px;
-
   .resume {
     .section {
       display: flex;
@@ -91,36 +88,15 @@
       }
 
       &__content {
-        text-align: center;
         padding-left: 0;
-        margin-bottom: spacing(1);
-
-        &-item {
-          display: inline-block;
-          padding-right: spacing(1.5);
-          padding-bottom: spacing(1);
-
-          &:after {
-            content: "\2022";
-            display: inline-block;
-            margin-left: spacing(1);
-          }
-
-          &:last-of-type {
-            padding-right: 0;
-
-            &:after {
-              display: none;
-            }
-          }
-        }
+        margin: spacing(3) 0 spacing(2);
+        width: 100%;
       }
 
       @include media($screen-sm) {
         align-items: flex-start;
 
         &__content {
-          text-align: left;
           padding-left: $icon-size + spacing(1);
         }
       }
